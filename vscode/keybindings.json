@@ -1,0 +1,116 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "shift+cmd+[BracketRight]",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "ctrl+shift+[Equal]",
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "shift+cmd+enter",
+        "command": "editor.action.insertLineAfter",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+enter",
+        "command": "-editor.action.insertLineAfter",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+cmd+down",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+    },
+    {
+        "key": "ctrl+alt+cmd+9",
+        "command": "-workbench.action.terminal.focusNext",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+    },
+    {
+        "key": "shift+cmd+up",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+    },
+    {
+        "key": "ctrl+alt+cmd+8",
+        "command": "-workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+    },
+    {
+        "key": "shift+cmd+right",
+        "command": "workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "alt+cmd+down",
+        "command": "-workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "shift+cmd+left",
+        "command": "workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "alt+cmd+up",
+        "command": "-workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+
+
+
+
+
+
+    {
+        "key": "alt+shift+N",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\u001b\u0020\u0063"
+        }
+    },
+    {
+        "key": "alt+shift+right",
+        "command": "workbench.action.terminal.sendSequence",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported",
+        "args": {
+            "text": "\u001b\u0020\u006e"
+        }
+    },
+    {
+        "key": "alt+shift+left",
+        "command": "workbench.action.terminal.sendSequence",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported",
+        "args": {
+            "text": "\u001b\u0020\u0070"
+        }
+    },
+    {
+        "key": "alt+shift+w",
+        "command": "workbench.action.terminal.sendSequence",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported",
+        "args": {
+            "text": "\u001b\u0020\u0026"
+        }
+    },
+    {
+        "key": "alt+ctrl+right",
+        "command": "workbench.action.terminal.sendSequence",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported",
+        "args": {
+            "text": "\u001b\u0020\u006b"
+        }
+    },
+    {
+        "key": "alt+ctrl+left",
+        "command": "workbench.action.terminal.sendSequence",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported",
+        "args": {
+            "text": "\u001b\u0020\u0075"
+        }
+    }
+]
