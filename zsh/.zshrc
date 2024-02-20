@@ -116,3 +116,4 @@ source $ZSH/oh-my-zsh.sh
 [[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"
 
 source ~/.zsh_aliases
+source ~/.zsh_device_specific
