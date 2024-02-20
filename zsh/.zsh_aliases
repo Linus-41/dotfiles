@@ -1,2 +1,3 @@
 alias ta='tmux a'
 alias cr='code . -r'
+alias updatessh="~/update_ssh_host.sh"
