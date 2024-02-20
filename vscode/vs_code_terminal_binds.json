@@ -1,0 +1,30 @@
+{
+    "key": "alt+shift+h",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+},
+{
+    "key": "alt+shift+n",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+},
+{
+    "key": "alt+shift+right",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+},
+{
+    "key": "alt+shift+left",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+},
+{
+    "key": "alt+ctrl+left",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+},
+{
+    "key": "alt+ctrl+right",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+}
