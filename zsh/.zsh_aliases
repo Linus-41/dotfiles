@@ -5,4 +5,4 @@ alias c='clear'
 alias ta='tmux a'
 alias cr='code . -r'
 alias updatessh="~/scripts/update_ssh_host.sh"
-alias gitclean="~/scripts/git_branch_cleanup.zsh"
+alias gitclean="zsh ~/scripts/git_branch_cleanup.zsh"
