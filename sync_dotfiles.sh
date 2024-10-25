@@ -30,9 +30,11 @@ for config_file in $(find "$scripts_directory" -type f -name "sync.config"); do
         echo "FIRST PATH: $first_filepath"
         echo "SECOND PATH: $second_filepath"
 
+        # Create the target directory if it doesn't exist
+        mkdir -p "$(dirname "$second_filepath")"
+
         # Print the extracted file paths
         echo "Creating symbolic link: $first_filepath to $second_filepath"
-
 
         # Check if the target path is a symbolic link
         if [ -L "$second_filepath" ]; then
