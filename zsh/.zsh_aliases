@@ -1,3 +1,7 @@
+alias ls='ls --color'
+alias ll="ls -l --color"
+alias vim='nvim'
+alias c='clear'
 alias ta='tmux a'
 alias cr='code . -r'
 alias updatessh="~/scripts/update_ssh_host.sh"
