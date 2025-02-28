@@ -1,0 +1,12 @@
+{
+    "personal": {
+        "name": "Linus-41",
+        "email": "l.widing@web.de",
+        "sshPath": "~/.ssh/id_rsa_personal"
+    },
+    "work": {
+        "name": "Linus Widing",
+        "email": "linus.widing@check24.de",
+        "sshPath": "~/.ssh/linuswiding-Bitbucket"
+    }
+}

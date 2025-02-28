@@ -6,3 +6,4 @@ alias ta='tmux a'
 alias cr='code . -r'
 alias updatessh="~/scripts/update_ssh_host.sh"
 alias gitclean="zsh ~/scripts/git_branch_cleanup.zsh"
+alias gitswitch="zsh ~/scripts/git_acc_switcher.zsh"
