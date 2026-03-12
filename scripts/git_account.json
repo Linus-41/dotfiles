@@ -2,11 +2,11 @@
     "personal": {
         "name": "Linus-41",
         "email": "l.widing@web.de",
-        "sshPath": "~/.ssh/id_rsa_personal"
+        "sshPath": "~/.ssh/github_private"
     },
     "work": {
         "name": "Linus Widing",
-        "email": "linus.widing@check24.de",
-        "sshPath": "~/.ssh/linuswiding-Bitbucket"
+        "email": "linus.widing@wealthapi.eu",
+        "sshPath": "~/.ssh/id_rsa_work"
     }
 }
