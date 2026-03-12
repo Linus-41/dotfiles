@@ -33,7 +33,6 @@
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.fontWeight": "normal",
-  "terminal.integrated.macOptionIsMeta": true,
   "window.restoreWindows": "none",
   "workbench.colorCustomizations": {
     "gitDecoration.ignoredResourceForeground": "#848505",
