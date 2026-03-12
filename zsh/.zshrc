@@ -76,3 +76,7 @@ source ~/.zsh_aliases
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+_ZO_DOCTOR=0
+
+# Created by `pipx` on 2025-05-07 17:37:05
+export PATH="$PATH:/Users/linuswiding/.local/bin"
