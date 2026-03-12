@@ -31,6 +31,20 @@ show_current_config() {
     echo "SSH key: $(git config core.sshCommand 2>/dev/null || echo 'Default SSH key')"
 }
 
+# Function to show current repo git identity
+show_current_account() {
+    # Check if we're in a git repository
+    if ! git rev-parse --git-dir &> /dev/null; then
+        echo "Error: Not a git repository"
+        exit 1
+    fi
+
+    local current_name="$(git config user.name)"
+    local current_email="$(git config user.email)"
+    echo "Name: ${current_name:-<not set>}"
+    echo "Email: ${current_email:-<not set>}"
+}
+
 # Function to switch Git configuration
 switch_config() {
     local account=$1
@@ -72,7 +86,7 @@ switch_config() {
 
 # Show usage if no arguments provided
 if [[ $# -eq 0 ]]; then
-    echo "Usage: $0 [account-name]"
+    echo "Usage: $0 [account-name|current|-c|--current]"
     echo "Available accounts:"
     jq -r 'keys[]' "$CONFIG_FILE"
     echo "\nCurrent configuration:"
@@ -80,5 +94,11 @@ if [[ $# -eq 0 ]]; then
     exit 0
 fi
 
+# Read-only mode: just show which account this repo is using
+if [[ "$1" == "current" || "$1" == "-c" || "$1" == "--current" ]]; then
+    show_current_account
+    exit 0
+fi
+
 # Switch configuration
-switch_config $1
+switch_config "$1"
