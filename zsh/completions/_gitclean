@@ -1,0 +1,10 @@
+#compdef gitclean git_branch_cleanup.zsh
+
+# Completion for local branch cleanup script/alias.
+_gitclean() {
+  _arguments \
+    '(-l --list)'{-l,--list}'[List local-only branches without deleting]'
+}
+
+compdef _gitclean gitclean
+compdef _gitclean git_branch_cleanup.zsh

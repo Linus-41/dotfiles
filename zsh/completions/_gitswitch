@@ -1,0 +1,27 @@
+#compdef gitswitch git_acc_switcher.zsh
+
+# Completion for git account switcher script/alias.
+_gitswitch() {
+  local primary_config="$HOME/scripts/git_acc_switcher_config.json"
+  local fallback_config="$HOME/scripts/git_account.json"
+  local config_file=""
+  local -a accounts
+
+  if [[ -f "$primary_config" ]]; then
+    config_file="$primary_config"
+  elif [[ -f "$fallback_config" ]]; then
+    config_file="$fallback_config"
+  fi
+
+  if command -v jq >/dev/null 2>&1 && [[ -n "$config_file" ]]; then
+    accounts=(${(f)$(jq -r 'keys[]' "$config_file" 2>/dev/null)})
+  else
+    accounts=()
+  fi
+
+  _arguments -C \
+    '1:account or action:((current:"Show current repo name/email" -c:"Show current repo name/email" --current:"Show current repo name/email" ${^accounts}))'
+}
+
+compdef _gitswitch gitswitch
+compdef _gitswitch git_acc_switcher.zsh

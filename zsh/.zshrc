@@ -40,6 +40,9 @@ zinit snippet OMZP::kubectl
 zinit snippet OMZP::kubectx
 zinit snippet OMZP::command-not-found
 
+# Load custom completions from dotfiles
+fpath=(~/.zsh/completions $fpath)
+
 # Load completions
 autoload -Uz compinit && compinit
 
