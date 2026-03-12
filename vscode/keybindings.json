@@ -20,34 +20,33 @@
         "command": "-editor.action.insertLineAfter",
         "when": "editorTextFocus && !editorReadonly"
     },
+
+
+
+    
+
     {
-        "key": "shift+cmd+down",
-        "command": "workbench.action.terminal.focusNext",
-        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
-    },
-    {
-        "key": "ctrl+alt+cmd+9",
-        "command": "-workbench.action.terminal.focusNext",
-        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
-    },
-    {
-        "key": "shift+cmd+up",
-        "command": "workbench.action.terminal.focusPrevious",
-        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
-    },
-    {
-        "key": "ctrl+alt+cmd+8",
-        "command": "-workbench.action.terminal.focusPrevious",
-        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
-    },
-    {
-        "key": "shift+cmd+right",
-        "command": "workbench.action.terminal.focusNextPane",
+        "key": "shift+cmd+h",
+        "command": "workbench.action.terminal.split",
         "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
     },
     {
-        "key": "alt+cmd+down",
-        "command": "-workbench.action.terminal.focusNextPane",
+        "key": "shift+cmd+v",
+        "command": "workbench.action.terminal.toggleSplitGroupLayout"
+    },
+    {
+        "key": "shift+cmd+n",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "shift+alt+right",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "shift+alt+left",
+        "command": "workbench.action.terminal.focusPrevious",
         "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
     },
     {
@@ -56,61 +55,32 @@
         "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
     },
     {
-        "key": "alt+cmd+up",
-        "command": "-workbench.action.terminal.focusPreviousPane",
+        "key": "shift+cmd+right",
+        "command": "workbench.action.terminal.focusNextPane",
         "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
     },
-
-
-
-
-
-
     {
-        "key": "alt+shift+N",
-        "command": "workbench.action.terminal.sendSequence",
-        "args": {
-            "text": "\u001b\u0020\u0063"
-        }
+        "key": "left cmd",
+        "command": "editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
     },
     {
-        "key": "alt+shift+right",
-        "command": "workbench.action.terminal.sendSequence",
-        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported",
-        "args": {
-            "text": "\u001b\u0020\u006e"
-        }
+        "key": "alt+cmd+up",
+        "command": "-editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
     },
     {
-        "key": "alt+shift+left",
-        "command": "workbench.action.terminal.sendSequence",
-        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported",
-        "args": {
-            "text": "\u001b\u0020\u0070"
-        }
+        "key": "alt+cmd+u",
+        "command": "editor.action.insertCursorAbove"
     },
     {
-        "key": "alt+shift+w",
-        "command": "workbench.action.terminal.sendSequence",
-        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported",
-        "args": {
-            "text": "\u001b\u0020\u0026"
-        }
+        "key": "alt+cmd+b",
+        "command": "editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
     },
     {
-        "key": "alt+ctrl+right",
-        "command": "workbench.action.terminal.sendSequence",
-        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported",
-        "args": {
-            "text": "\u001b\u0020\u006b"
-        }
-    },
-    {
-        "key": "alt+ctrl+left",
-        "command": "workbench.action.terminal.sendSequence",
-        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported",
-        "args": {
-            "text": "\u001b\u0020\u0075"
-        }
+        "key": "alt+cmd+down",
+        "command": "-editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
     }
 ]
