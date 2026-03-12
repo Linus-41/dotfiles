@@ -8,3 +8,6 @@ alias updatessh="~/scripts/update_ssh_host.sh"
 alias gitclean="zsh ~/scripts/git_branch_cleanup.zsh"
 alias gitswitch="zsh ~/scripts/git_acc_switcher.zsh"
 alias cs='cursor'
+alias x='exit'
+alias lg='lazygit'
+alias py='pycharm'
