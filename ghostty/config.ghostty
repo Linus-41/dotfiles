@@ -21,12 +21,12 @@ cursor-text = #282a36
 selection-foreground = #f8f8f2
 selection-background = #44475a
 # Custom split and pane navigation bindings
-keybind = super+shift+h=new_split:right
-keybind = super+shift+v=new_split:down
-keybind = super+shift+arrow_up=goto_split:up
-keybind = super+shift+arrow_down=goto_split:down
-keybind = super+shift+arrow_left=goto_split:left
-keybind = super+shift+arrow_right=goto_split:right
+keybind = super+ctrl+h=new_split:right
+keybind = super+ctrl+v=new_split:down
+keybind = super+ctrl+arrow_up=goto_split:up
+keybind = super+ctrl+arrow_down=goto_split:down
+keybind = super+ctrl+arrow_left=goto_split:left
+keybind = super+ctrl+arrow_right=goto_split:right
 
 # Global quick terminal toggle (macOS)
 keybind = global:alt+space=toggle_quick_terminal
