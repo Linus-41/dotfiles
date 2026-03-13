@@ -11,6 +11,7 @@ fi
 
 typeset -a candidates
 typeset -A seen
+context_locked="false"
 
 detect_jetbrains_from_process_tree() {
   local pid="$PPID"
@@ -45,6 +46,18 @@ add_candidate() {
   fi
 }
 
+is_xcode_target() {
+  local path="$1"
+  case "$path" in
+    *.swift|*.xcodeproj|*.xcworkspace|*.pbxproj|*.storyboard|*.xib|*.plist)
+      return 0
+      ;;
+    *)
+      return 1
+      ;;
+  esac
+}
+
 if [ -n "${PREFERRED_EDITOR:-}" ]; then
   case "$PREFERRED_EDITOR" in
     code|cursor|idea|pycharm)
@@ -54,11 +67,13 @@ if [ -n "${PREFERRED_EDITOR:-}" ]; then
 fi
 
 if [ "${TERM_PROGRAM:-}" = "vscode" ]; then
+  context_locked="true"
   add_candidate code
   add_candidate cursor
 fi
 
 if [ "${TERMINAL_EMULATOR:-}" = "JetBrains-JediTerm" ]; then
+  context_locked="true"
   jetbrains_host="$(detect_jetbrains_from_process_tree)"
   frontmost_app=""
   if command -v osascript >/dev/null 2>&1; then
@@ -77,11 +92,27 @@ if [ "${TERMINAL_EMULATOR:-}" = "JetBrains-JediTerm" ]; then
   fi
 fi
 
+if [ "$context_locked" = "false" ] && is_xcode_target "$target"; then
+  add_candidate xcode
+fi
+
 add_candidate code
 add_candidate cursor
 add_candidate idea
 add_candidate pycharm
 add_candidate open_vscode
+
+open_with_xcode() {
+  if command -v xed >/dev/null 2>&1; then
+    if [ -n "$line" ]; then
+      xed --line "$line" "$target"
+    else
+      xed "$target"
+    fi
+  else
+    open -a "Xcode" "$target"
+  fi
+}
 
 open_with_code() {
   if [ -n "$line" ]; then
@@ -117,6 +148,12 @@ open_with_pycharm() {
 
 for editor in "${candidates[@]}"; do
   case "$editor" in
+    xcode)
+      if command -v xed >/dev/null 2>&1 || command -v open >/dev/null 2>&1; then
+        open_with_xcode
+        exit 0
+      fi
+      ;;
     code)
       if command -v code >/dev/null 2>&1; then
         open_with_code
