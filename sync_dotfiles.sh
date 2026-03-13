@@ -70,3 +70,4 @@ while IFS= read -r -d '' config_file; do
     done < "$config_file"
     echo "---------------------------------"
 done < <(find "$scripts_directory" -type f -name "sync.config" -print0)
+Add custom command to generate AI commit message from staged changes.

@@ -1,0 +1,7 @@
+customCommands:
+  - key: '<c-g>'
+    context: global
+    description: Generate AI commit message from staged changes
+    command: '$HOME/scripts/lazygit_generate_commit_message.zsh'
+    output: popup
+    loadingText: Generating commit message with Ollama...
