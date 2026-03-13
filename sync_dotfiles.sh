@@ -56,7 +56,7 @@ while IFS= read -r -d '' config_file; do
         # Replace existing links, and safely back up real files/directories.
         if [ -L "$second_filepath" ]; then
             # Target is a symbolic link, force override.
-            ln -sf "$first_filepath" "$second_filepath"
+            ln -sfn "$first_filepath" "$second_filepath"
         elif [ -e "$second_filepath" ]; then
             backup_path="${second_filepath}.backup.$(date +%Y%m%d%H%M%S)"
             echo "Target exists and is not a symlink. Backing up to: $backup_path"
@@ -70,4 +70,3 @@ while IFS= read -r -d '' config_file; do
     done < "$config_file"
     echo "---------------------------------"
 done < <(find "$scripts_directory" -type f -name "sync.config" -print0)
-Add custom command to generate AI commit message from staged changes.
