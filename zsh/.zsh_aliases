@@ -9,5 +9,5 @@ alias gitclean="zsh ~/scripts/git_branch_cleanup.zsh"
 alias gitswitch="zsh ~/scripts/git_acc_switcher.zsh"
 alias cs='cursor'
 alias x='exit'
-alias lg='lazygit'
+alias lg='EDITOR=$HOME/scripts/lazygit_smart_open.zsh lazygit'
 alias py='pycharm'

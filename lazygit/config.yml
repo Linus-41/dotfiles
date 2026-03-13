@@ -1,3 +1,8 @@
+os:
+  edit: '$HOME/scripts/lazygit_smart_open.zsh {{filename}}'
+  editAtLine: '$HOME/scripts/lazygit_smart_open.zsh {{filename}} {{line}}'
+  open: '$HOME/scripts/lazygit_smart_open.zsh {{filename}}'
+
 customCommands:
   - key: '<c-g>'
     context: global
